@@ -19,7 +19,22 @@ var uuidCount int
 var uuidCmd = &cobra.Command{
 	Use:   "uuid <version>",
 	Short: "Generates a UUID of the given version",
-	Args:  cobra.ExactArgs(1),
+	Example: `# Generate a UUID v4
+
+mkid uuid 4
+
+# Generate a base62-encoded UUID v7
+
+mkid uuid 7 -b62
+
+# Generate a non-padded base58-encoded UUID v4
+
+mkid uuid 4 -b58 -P
+
+# Generate 100 URL-safe base64-encoded UUID v4s
+
+mkid uuid 4 -burl64 -c100`,
+	Args: cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		if cmd.Flags().Changed("pad") && (uuidBase != "58" && uuidBase != "62") {
 			return errors.New("padding is only supported for base-58 and base-62 encoding")
