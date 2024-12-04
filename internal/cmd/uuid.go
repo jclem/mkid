@@ -18,21 +18,17 @@ var uuidCount int
 var uuidCmd = &cobra.Command{
 	Use:   "uuid <version>",
 	Short: "Generates a UUID of the given version",
-	Example: `# Generate a UUID v4
+	Example: `  # Generate a UUID v4
+  mkid uuid 4
 
-mkid uuid 4
+  # Generate a base62-encoded UUID v7
+  mkid uuid 7 -b62
 
-# Generate a base62-encoded UUID v7
-
-mkid uuid 7 -b62
-
-# Generate a non-padded base58-encoded UUID v4
-
-mkid uuid 4 -b58 -P
-
-# Generate 100 URL-safe base64-encoded UUID v4s
-
-mkid uuid 4 -burl64 -c100`,
+  # Generate a non-padded base58-encoded UUID v4
+  mkid uuid 4 -b58 -P
+  
+  # Generate 100 URL-safe base64-encoded UUID v4s
+  mkid uuid 4 -burl64 -c100`,
 	Args: cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
 		for range uuidCount {
