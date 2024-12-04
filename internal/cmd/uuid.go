@@ -2,7 +2,6 @@ package cmd
 
 import (
 	"encoding/base64"
-	"errors"
 	"fmt"
 	"math/big"
 	"strings"
@@ -36,10 +35,6 @@ mkid uuid 4 -b58 -P
 mkid uuid 4 -burl64 -c100`,
 	Args: cobra.ExactArgs(1),
 	RunE: func(cmd *cobra.Command, args []string) error {
-		if cmd.Flags().Changed("pad") && (uuidBase != "58" && uuidBase != "62") {
-			return errors.New("padding is only supported for base-58 and base-62 encoding")
-		}
-
 		for range uuidCount {
 			ustr, err := genUUID(args[0])
 			if err != nil {
