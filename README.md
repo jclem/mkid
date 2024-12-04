@@ -231,7 +231,7 @@ mkid uuid <version> [flags]
   -b, --base string   base-encoding for the UUID (58, 62, 64, url64)
   -c, --count int     number of UUIDs to generate (default 1)
   -h, --help          help for uuid
-  -P, --no-pad        do not pad base-58 or base-62 encoded UUIDs with zeroes
+  -P, --no-pad        do not pad base-58 or base-62 encoded UUIDs with zero-values
 ```
 
 ### SEE ALSO

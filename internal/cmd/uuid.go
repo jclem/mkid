@@ -96,7 +96,7 @@ func padStr(s string, n int, pad rune) string {
 
 func init() {
 	uuidCmd.Flags().StringVarP(&uuidBase, "base", "b", "", "base-encoding for the UUID (58, 62, 64, url64)")
-	uuidCmd.Flags().BoolVarP(&uuidNoPad, "no-pad", "P", false, "do not pad base-58 or base-62 encoded UUIDs with zeroes")
+	uuidCmd.Flags().BoolVarP(&uuidNoPad, "no-pad", "P", false, "do not pad base-58 or base-62 encoded UUIDs with zero-values")
 	uuidCmd.Flags().IntVarP(&uuidCount, "count", "c", 1, "number of UUIDs to generate")
 	rootCmd.AddCommand(uuidCmd)
 }
