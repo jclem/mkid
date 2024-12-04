@@ -15,7 +15,6 @@ mkid is a CLI for generating unique IDs
 * [mkid ulid](#mkid-ulid)	 - Generates a ULID
 * [mkid uuid](#mkid-uuid)	 - Generates a UUID of the given version
 
-
 ## mkid completion
 
 Generate the autocompletion script for the specified shell
@@ -39,7 +38,6 @@ See each sub-command's help for details on how to use the generated script.
 * [mkid completion fish](#mkid-completion-fish)	 - Generate the autocompletion script for fish
 * [mkid completion powershell](#mkid-completion-powershell)	 - Generate the autocompletion script for powershell
 * [mkid completion zsh](#mkid-completion-zsh)	 - Generate the autocompletion script for zsh
-
 
 ## mkid completion bash
 
@@ -84,7 +82,6 @@ mkid completion bash
 
 * [mkid completion](#mkid-completion)	 - Generate the autocompletion script for the specified shell
 
-
 ## mkid completion fish
 
 Generate the autocompletion script for fish
@@ -119,7 +116,6 @@ mkid completion fish [flags]
 
 * [mkid completion](#mkid-completion)	 - Generate the autocompletion script for the specified shell
 
-
 ## mkid completion powershell
 
 Generate the autocompletion script for powershell
@@ -150,7 +146,6 @@ mkid completion powershell [flags]
 ### SEE ALSO
 
 * [mkid completion](#mkid-completion)	 - Generate the autocompletion script for the specified shell
-
 
 ## mkid completion zsh
 
@@ -197,7 +192,6 @@ mkid completion zsh [flags]
 
 * [mkid completion](#mkid-completion)	 - Generate the autocompletion script for the specified shell
 
-
 ## mkid docs
 
 Print documentation
@@ -216,7 +210,6 @@ mkid docs [flags]
 ### SEE ALSO
 
 * [mkid](#mkid)	 - mkid is a CLI for generating unique IDs
-
 
 ## mkid ulid
 
@@ -243,7 +236,6 @@ mkid ulid [flags]
 ### SEE ALSO
 
 * [mkid](#mkid)	 - mkid is a CLI for generating unique IDs
-
 
 ## mkid uuid
 
@@ -289,5 +281,4 @@ mkid uuid <version> [flags]
 ### SEE ALSO
 
 * [mkid](#mkid)	 - mkid is a CLI for generating unique IDs
-
 
