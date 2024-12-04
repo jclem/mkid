@@ -221,6 +221,14 @@ mkid docs [flags]
 
 Generates a UUID of the given version
 
+### Synopsis
+
+Generates a UUID of the given version.
+
+The UUID is encoded in the specified base-encoding, if provided. For base-58 and
+base-62, a standard length of 22 is assumed. Unless the --no-pad/-P flag is
+provided, the UUID will be left-padded with the encoding's zero value.
+
 ```
 mkid uuid <version> [flags]
 ```
