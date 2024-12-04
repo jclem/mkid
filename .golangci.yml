@@ -1,0 +1,41 @@
+run:
+  timeout: 5m
+
+linters:
+  presets:
+    - bugs
+    - comment
+    - complexity
+    - error
+    - format
+    - import
+    - metalinter
+    - module
+    - performance
+    - sql
+    - style
+    - test
+    - unused
+
+  disable:
+    - depguard # enforces dependency allow list; not using allow list
+    - gochecknoglobals # heavily using globals for flags and commands; not helpful
+    - gochecknoinits # heavily using them to connect subcommands; not helpful
+
+    # annoying/bad
+    - cyclop # enforces maximum cyclomatic complexity; not helpful
+    - err113 # disallows returning one-off errors; annoying
+    - exhaustruct # enforces exhaustive structs; often incorrect; bad
+    - funlen # limits function length; annoying
+    - gocognit # enforces maximum cognitive complexity; not helpful; what is it even?
+    - godox # bans TODO comments; annoying
+    - gofumpt # different code formatter; bad
+    - ireturn # bans returning interfaces; often incorrect; bad
+    - lll # limits line length; annoying
+    - mnd # disallows magic numbers; annoying
+    - nlreturn # requires blank line before return; annoying
+    - nonamedreturns # disallows named returns; often required for defer error checking; bad
+    - tagalign # enforces tag alignment/order; annoying with Huma
+    - tagliatelle # enforces tag name style; often incorrect; bad
+    - varnamelen # limits variable name length; annoying
+    - wsl # tedious whitespace rules; annoying
